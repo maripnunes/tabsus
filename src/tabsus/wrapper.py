@@ -86,7 +86,7 @@ class Database:
 
 
 DATABASES = [
-    Database('SIH', 'https://github.com/maripnunes/tabsus/blob/master/src/tabsus/TAB_SIH.zip'),
+    Database('SIH', 'ftp://ftp.datasus.gov.br/dissemin/publicos/SIHSUS/200801_/Auxiliar/TAB_SIH.zip'),
     Database('SIA', 'ftp://ftp.datasus.gov.br/dissemin/publicos/SIASUS/200801_/Auxiliar/TAB_SIA.zip'),
     Database('SIM', 'ftp://ftp.datasus.gov.br/dissemin/publicos/SIM/CID10/TAB/OBITOS_CID10_TAB.ZIP'),
     Database('SINASC', 'ftp://ftp.datasus.gov.br/dissemin/publicos/SINASC/1996_/Auxiliar/NASC_NOV_TAB.zip'),
