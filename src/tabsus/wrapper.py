@@ -73,7 +73,7 @@ class Database:
                 self.file_path = os.path.abspath(filename)
             else:
                 os.makedirs(os.path.dirname(filename), exist_ok=True)
-                urllib.request.urlretrieve(self.tab_url.geturl(), filename)
+                #urllib.request.urlretrieve(self.tab_url.geturl(), filename)
                 self.file_path = os.path.abspath(filename)
 
         try:
