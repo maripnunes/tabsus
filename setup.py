@@ -9,7 +9,7 @@ setuptools.setup(
     description="Library for processing DATASUS database files",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="<https://github.com/authorname/templatepackage>",
+    url="<https://github.com//maripnunes/tabsus2>",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
