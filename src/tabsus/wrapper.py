@@ -55,13 +55,15 @@ class TabSus:
 
 class Database:
     def __init__(self, name, tab_url):
+        #self.name = name
+        #self.tab_url = urllib.parse.urlparse(tab_url)
+
+        #self.file_path = None
+        #if self.tab_url.scheme == 'file':
+        #    self.file_path = os.path.abspath(os.path.join(self.tab_url.netloc, self.tab_url.path))
         self.name = name
-        self.tab_url = urllib.parse.urlparse(tab_url)
-
-        self.file_path = None
-        if self.tab_url.scheme == 'file':
-            self.file_path = os.path.abspath(os.path.join(self.tab_url.netloc, self.tab_url.path))
-
+        self.file_path = name
+        
     @property
     def tabsus(self):
         return self.get_tabsus()
@@ -74,7 +76,7 @@ class Database:
                 self.file_path = os.path.abspath(filename)
             else:
                 os.makedirs(os.path.dirname(filename), exist_ok=True)
-                urllib.request.urlretrieve(self.tab_url.geturl(), filename)
+                #urllib.request.urlretrieve(self.tab_url.geturl(), filename)
                 self.file_path = os.path.abspath(filename)
 
         try:
