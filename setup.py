@@ -3,7 +3,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 setuptools.setup(
 	    name="tabsus", # Replace with your username
-    version="1.0.0",
+    version="1.0.1",
     author="Mariana Nunes",
     author_email="marianapnunes@gmail.com",
     description="Library for processing DATASUS database files",
