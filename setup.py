@@ -2,7 +2,7 @@ import setuptools
 with open("README.md", "r") as fh:
     long_description = fh.read()
 setuptools.setup(
-	    name="tabsus2", # Replace with your username
+	    name="tabsus", # Replace with your username
     version="1.0.0",
     author="Mariana Nunes",
     author_email="marianapnunes@gmail.com",
