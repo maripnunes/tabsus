@@ -86,13 +86,13 @@ class Database:
 
 
 DATABASES = [
-    Database('SIH', 'ftp://ftp.datasus.gov.br/dissemin/publicos/SIHSUS/200801_/Auxiliar/TAB_SIH.zip'),
-    Database('SIA', 'ftp://ftp.datasus.gov.br/dissemin/publicos/SIASUS/200801_/Auxiliar/TAB_SIA.zip'),
-    Database('SIM', 'ftp://ftp.datasus.gov.br/dissemin/publicos/SIM/CID10/TAB/OBITOS_CID10_TAB.ZIP'),
-    Database('SINASC', 'ftp://ftp.datasus.gov.br/dissemin/publicos/SINASC/1996_/Auxiliar/NASC_NOV_TAB.zip'),
-    Database('SINANNET', 'ftp://ftp.datasus.gov.br/dissemin/publicos/SINAN/AUXILIAR/TAB_SINANNET.zip'),
-    Database('SINANONLINE', 'ftp://ftp.datasus.gov.br/dissemin/publicos/SINAN/AUXILIAR/TAB_SINANONLINE.zip'),
-    Database('ANS', 'http://ftp.dadosabertos.ans.gov.br/FTP/Base_de_dados/Microdados/arquivos_auxiliares_de_tab_def_e_cnv/arquivos_auxiliares_de_tabulacao.zip')
+    Database('SIH', '//wsl.localhost/Ubuntu/home/marianan/DATASUS/SIHSUS/TAB_SIH.zip'),
+    Database('SIA', '//wsl.localhost/Ubuntu/home/marianan/DATASUS/SIASUS/TAB_SIA.zip'),
+    #Database('SIM', 'ftp://ftp.datasus.gov.br/dissemin/publicos/SIM/CID10/TAB/OBITOS_CID10_TAB.ZIP'),
+    #Database('SINASC', 'ftp://ftp.datasus.gov.br/dissemin/publicos/SINASC/1996_/Auxiliar/NASC_NOV_TAB.zip'),
+    #Database('SINANNET', 'ftp://ftp.datasus.gov.br/dissemin/publicos/SINAN/AUXILIAR/TAB_SINANNET.zip'),
+    #Database('SINANONLINE', 'ftp://ftp.datasus.gov.br/dissemin/publicos/SINAN/AUXILIAR/TAB_SINANONLINE.zip'),
+    #Database('ANS', 'http://ftp.dadosabertos.ans.gov.br/FTP/Base_de_dados/Microdados/arquivos_auxiliares_de_tab_def_e_cnv/arquivos_auxiliares_de_tabulacao.zip')
 ]
 
 DATABASES = {it.name: it for it in DATABASES}
