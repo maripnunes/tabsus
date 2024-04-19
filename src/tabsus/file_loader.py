@@ -21,7 +21,7 @@ class FileLoader:
     @classmethod
     def open(cls, path):
         if os.path.isfile(path) and (path.lower().endswith('.zip') or zipfile.is_zipfile(path)):
-            return print(ZipFileLoader(path))
+            return ZipFileLoader(path)
         elif os.path.isdir(path):
             return FileSystemLoader(path)
 
