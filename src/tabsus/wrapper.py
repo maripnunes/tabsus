@@ -54,7 +54,7 @@ class TabSus:
 
 
 class Database:
-    def __init__(self, name):
+    def __init__(self, name, tab_url):
         self.name = name
 
         self.file_path = None
