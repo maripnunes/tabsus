@@ -58,9 +58,10 @@ class Database:
         self.name = name
         self.tab_url = urllib.parse.urlparse(tab_url)
 
-        self.file_path = None
-        if self.tab_url.scheme == 'file':
-            self.file_path = os.path.abspath(os.path.join(self.tab_url.netloc, self.tab_url.path))
+        self.file_path = os.path.abspath(os.path.join(self.tab_url.netloc, self.tab_url.path))
+        #self.file_path = None
+        #if self.tab_url.scheme == 'file':
+        #    self.file_path = os.path.abspath(os.path.join(self.tab_url.netloc, self.tab_url.path))
 
     @property
     def tabsus(self):
