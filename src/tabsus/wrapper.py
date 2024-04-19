@@ -56,10 +56,11 @@ class TabSus:
 class Database:
     def __init__(self, name, tab_url):
         self.name = name
+        self.tab_url = urllib.parse.urlparse(tab_url)
 
         self.file_path = None
-        #if self.tab_url.scheme == 'file':
-        #    self.file_path = os.path.abspath(os.path.join(self.tab_url.netloc, self.tab_url.path))
+        if self.tab_url.scheme == 'file':
+            self.file_path = os.path.abspath(os.path.join(self.tab_url.netloc, self.tab_url.path))
 
     @property
     def tabsus(self):
@@ -71,6 +72,10 @@ class Database:
         if not self.file_path:
             if os.path.exists(filename):
                 self.file_path = os.path.abspath(filename)
+            else:
+                os.makedirs(os.path.dirname(filename), exist_ok=True)
+                urllib.request.urlretrieve(self.tab_url.geturl(), filename)
+                self.file_path = os.path.abspath(filename)
 
         try:
             return TabSus(self.file_path)
@@ -78,7 +83,6 @@ class Database:
             logging.warning(f"Incomplete or invalid file {e}")
             os.remove(self.file_path)
             return self.get_tabsus()
-
 
 DATABASES = [
     Database('SIH', '/home/ubuntu/DATASUS/SIHSUS/TAB_SIH.zip'),
