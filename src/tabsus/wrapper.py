@@ -85,8 +85,8 @@ class Database:
             return self.get_tabsus()
 
 DATABASES = [
-    Database('SIH', '/home/ubuntu/DATASUS/SIHSUS/TAB_SIH.zip'),
-    Database('SIA', '/home/ubuntu/DATASUS/SIASUS/TAB_SIA.zip'),
+    Database('SIH', '//home/ubuntu/DATASUS/SIHSUS/TAB_SIH.zip'),
+    Database('SIA', '//home/ubuntu/DATASUS/SIASUS/TAB_SIA.zip'),
     #Database('SIM', 'ftp://ftp.datasus.gov.br/dissemin/publicos/SIM/CID10/TAB/OBITOS_CID10_TAB.ZIP'),
     #Database('SINASC', 'ftp://ftp.datasus.gov.br/dissemin/publicos/SINASC/1996_/Auxiliar/NASC_NOV_TAB.zip'),
     #Database('SINANNET', 'ftp://ftp.datasus.gov.br/dissemin/publicos/SINAN/AUXILIAR/TAB_SINANNET.zip'),
